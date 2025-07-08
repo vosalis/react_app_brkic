@@ -56,7 +56,7 @@ export default function Media(props) {
                 sx={{
                   boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
                   margin: "0 auto",
-                  maxWidth: 345,
+                  maxWidth: 360,
                   minHeight: "340px",
                   position: "relative",
                   backgroundColor: "rgba(56, 56, 56, 0.8)",

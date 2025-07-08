@@ -67,6 +67,7 @@ export default function ResponsiveDialog({
             component="img"
             src={`${import.meta.env.BASE_URL}${img}`}
             alt={title}
+            loading="lazy"
             sx={{
               width: "100%",
               maxHeight: 400,
