@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ResponsiveAppBar from "./Components/Nav/Navbar";
 import GuestFooter from "./Components/Footer/Footer";
