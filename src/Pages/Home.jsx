@@ -95,7 +95,7 @@ export default function FixedContainer() {
               width: "100%",
               height: "10px",
               marginTop: "100px",
-              backgroundColor: "rgba(77, 166, 255, 0.1)",
+              backgroundColor: "rgba(77, 166, 255, 0.95)",
               backdropFilter: "blur(2px)",
               WebkitBackdropFilter: "blur(10px)",
               borderRadius: "5px",
