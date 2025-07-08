@@ -55,6 +55,7 @@ export default function Events(props) {
             >
               <Box sx={{ height: 200, overflow: "hidden" }}>
                 <CardMedia
+                  
                   sx={{
                     height: "100%",
                     backgroundSize: "cover",
@@ -64,6 +65,7 @@ export default function Events(props) {
                       transform: "scale(1.1)",
                     },
                   }}
+                  loading="lazy"
                   image={`${import.meta.env.BASE_URL}${item.src}`}
                   title="green iguana"
                 />

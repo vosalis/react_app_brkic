@@ -73,6 +73,7 @@ export default function Media(props) {
                       transform: "scale(1.1)",
                     },
                   }}
+                  loading="lazy"
                   image={`${import.meta.env.BASE_URL}${item.src}`}
                   title="green iguana"
                 />
