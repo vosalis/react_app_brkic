@@ -71,6 +71,7 @@ export default function AutoGrid() {
         <Slider {...settings}>
           {mata.map((item) => (
             <Box
+              loading="lazy"
               key={item.alt}
               component="img"
               src={`${import.meta.env.BASE_URL}${item.image}`}
@@ -112,11 +113,21 @@ export default function AutoGrid() {
               </Typography>
             </Grid>
 
-            <Grid md={3} xs={8} sx={{ position: "relative", minHeight: "150px" }}>
+            <Grid
+              md={3}
+              xs={8}
+              sx={{ position: "relative", minHeight: "150px" }}
+            >
               <Typography sx={{}} variant="h6">
                 COOKIE AND PRIVACY POLICY
               </Typography>
-              <List sx={{ position: "absolute", bottom: 0, display: "inline-block" }}>
+              <List
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  display: "inline-block",
+                }}
+              >
                 {pages.map((page) => (
                   <ListItem sx={{ padding: 0 }} key={page.text} disablePadding>
                     <ListItemButton
