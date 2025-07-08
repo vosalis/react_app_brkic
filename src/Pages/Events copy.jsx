@@ -1,9 +1,8 @@
-import * as React from "react";
 import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Container, Box } from "@mui/material";
-import { useSearchParams } from "react-router-dom";
+import { Container } from "@mui/material";
 import data from "../assets/data/events.json";
 import ResponsiveDialog from "../Components/newsModal";
 import Card from "@mui/material/Card";
@@ -11,11 +10,14 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import { useNavigate, useSearchParams } from "react-router-dom";
+
 
 export default function Events(props) {
   const { loading = false } = props;
   const [openEvent, setOpenEvent] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (searchParams.get("name")) {
@@ -35,57 +37,35 @@ export default function Events(props) {
     setSearchParams(`name=${item.title}`);
   };
 
+  
   return (
+    
     <Container sx={{ mt: "100px" }}>
       <Typography variant="h4" sx={{ color: "#4DA6FF", pb: "40px" }}>
-        NAŠI DOGAĐAJI
+        OUR EVENTS
       </Typography>
-      <Grid container spacing={4} sx={{ pb: "80px" }}>
+      <Grid container spacing={4} sx={{ pb: "80px", 
+    justifyContent: "center"}}>
         {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
           <Grid item key={index} size={{ xs: 12, md: 4 }}>
             <Card
               sx={{
-                margin: "0 auto",
                 maxWidth: 345,
-                minHeight: "330px",
+                minHeight: "300px",
                 position: "relative",
-                backdropFilter: "blur(2px)",
-                WebkitBackdropFilter: "blur(10px)",
-                backgroundColor: "rgba(56, 56, 56, 0.5)",
+                backgroundColor: "#343434",
+                animation: `${appear} linear`,
+                animationTimeline: "view()",
+                animationRange: "enter 0% cover 40%",
               }}
             >
-              <Box sx={{ height: 200, overflow: "hidden" }}>
-                <CardMedia
-                  
-                  sx={{
-                    height: "100%",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    transition: "transform 0.4s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.1)",
-                    },
-                  }}
-                  loading="lazy"
-                  image={`${import.meta.env.BASE_URL}${item.src}`}
-                  title="green iguana"
-                />
-              </Box>
+              <CardMedia
+                sx={{ height: 140 }}
+                image={item.src}
+                title="green iguana"
+              />
               <CardContent sx={{ color: "#fff" }}>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{
-                    fontSize: {
-                      xs: "0.8rem",
-                      sm: "0.9rem",
-                      md: "1.0rem",
-                      lg: "1.1rem",
-                    },
-                    pb: "15px",
-                  }}
-                >
+                <Typography gutterBottom variant="h5" component="div">
                   {item.title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: "text.secondary" }}>
@@ -95,8 +75,8 @@ export default function Events(props) {
               <CardActions sx={{ position: "absolute", bottom: "5px" }}>
                 <Button
                   onClick={() => {
-                    handleOpenEvent(item);
-                  }}
+                handleOpenEvent(item)
+              }}
                   size="small"
                 >
                   Learn More

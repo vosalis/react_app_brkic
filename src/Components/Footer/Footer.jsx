@@ -1,3 +1,4 @@
+import * as React from "react";
 import "./Footer.css";
 import { styled, Sheet, Grid } from "@mui/joy";
 import { Box, Paper, Container, Typography } from "@mui/material";
