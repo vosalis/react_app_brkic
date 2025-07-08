@@ -15,7 +15,6 @@ const acent = {
   fontStyle: "normal",
   paddingTop: "14px",
   paddingBottom: "50px",
-  paddingLeft: {sx: "20px", md: "0px"},
 };
 
 export default function FixedContainer() {
@@ -32,7 +31,7 @@ export default function FixedContainer() {
             position: "relative",
           }}
         >
-          <Box sx={{ maxHeight: "100vh - 100px" }}>
+          <Box /*sx={{ maxHeight: "100vh - 100px" }}*/>
             <Box sx={{ position: "relative", zIndex: 2, paddingLeft: {xs:"30px", md: "0"}}}>
               <Typography
                 variant="h1"
@@ -85,8 +84,8 @@ export default function FixedContainer() {
                 opacity: 1,
 
                 display: {
-                  xs: "none", // hidden on screens <600px
-                  sm: "block", // visible from 600px and up
+                  xs: "none", 
+                  sm: "block", 
                 },
               }}
             />
@@ -96,10 +95,11 @@ export default function FixedContainer() {
               width: "100%",
               height: "10px",
               marginTop: "100px",
-              backgroundColor: "rgba(77, 166, 255, 0.7)",
+              backgroundColor: "rgba(77, 166, 255, 0.95)",
               backdropFilter: "blur(2px)",
               WebkitBackdropFilter: "blur(10px)",
               borderRadius: "5px",
+              boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
             }}
           ></Box>
           <Box className="newsContainer" sx={{ mt: "120px" }}>

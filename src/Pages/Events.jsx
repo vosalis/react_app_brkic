@@ -42,7 +42,7 @@ export default function Events(props) {
       </Typography>
       <Grid container spacing={4} sx={{ pb: "80px" }}>
         {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
-          <Grid item key={index} size={{ xs: 12, md: 4 }}>
+          <Grid key={index} size={{ xs: 12, md: 4 }}>
             <Card
               sx={{
                 margin: "0 auto",

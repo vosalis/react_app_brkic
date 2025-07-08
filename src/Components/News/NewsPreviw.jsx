@@ -48,7 +48,6 @@ export default function Media(props) {
         {(loading ? Array.from(new Array(3)) : data.slice(0, 3)).map(
           (item, index) => (
             <Grid
-              item
               key={index}
               size={{ xs: 12, sm: 4 }}
               sx={{ justifyItems: "center" }}

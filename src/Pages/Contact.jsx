@@ -1,21 +1,21 @@
-import React from "react";
 import { Box, Typography, Container, Stack, Divider, Link } from "@mui/material";
 import { Email, Phone, Instagram } from "@mui/icons-material";
 import XIcon from '@mui/icons-material/X';
 
 export default function Contact() {
   return (
-    <Box sx={{ py: 10, mt: "50px" }}>
-      <Container maxWidth="lg"sx={{padding: "130px 0"}}>
+      
         <Box
           sx={{
-
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             gap: 6,
+            margin: {
+      xs: "200px 5px 130px 30px" , 
+      md: "250px 100px 250px 100px"
+    }
           }}
         >
-          {/* Left side text */}
           <Box sx={{ flex: 1 }}>
             <Typography
               variant="h2"
@@ -26,7 +26,7 @@ export default function Contact() {
                 mb: 3,
                 letterSpacing: 1.2,
                 fontFamily: "Bebas Neue,sans-serif",
-                mt: { sx:"0", md:"-20px" }
+                mt: { xs:"0", md:"-20px" }
 
               }}
             >
@@ -36,8 +36,6 @@ export default function Contact() {
               Ukoliko imate pitanja, predloge ili želite da se povežete sa nama, stojimo vam na raspolaganju. Naše adrese i kontakt informacije su navedene u nastavku.
             </Typography>
           </Box>
-
-          {/* Divider */}
           <Divider
             orientation="vertical"
             flexItem
@@ -48,48 +46,42 @@ export default function Contact() {
             }}
           />
 
-          {/* Right side contact info */}
           <Box sx={{ flex: 1 }}>
-            <Stack spacing={4}>
+            <Stack spacing={4} sx={{justifyContent: "space-between", height: "100%" }}>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Phone sx={{ color: "#4DA6FF" }} />
-                <Typography sx={{ color: "#f5f5f5" }}>
-                  
-                  <Link href="tel:+381-63-690-271" target="_blank" underline="hover" sx={{ mt: "5px", ml: "20px", color: "#f5f5f5", fontWeight: 400, fontSize:"px" }}>
+               
+                  <Link href="tel:+381-63-690-271" target="_blank" underline="none" sx={{ fontFamily: "Ubuntu, sans-serif !important", mt: "5px", ml: "20px", color: "#ccc", fontWeight: 400,  fontSize:"19px"}}>
                     +381-63-690-271
                   </Link>
-                </Typography>
+                
               </Stack>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Email sx={{ color: "#4DA6FF" }} />
-                <Typography sx={{ color: "#f5f5f5" }}>
-                  
-                  <Link href="mailto:info@urosbrkic.com" target="_blank" underline="hover" sx={{ mt: "5px", ml: "20px", color: "#f5f5f5", fontWeight: 400, fontSize:"18px" }}>
+                
+                  <Link href="mailto:info@urosbrkic.com" target="_blank" underline="none" sx={{ fontFamily: "Ubuntu, sans-serif !important", mt: "5px", ml: "20px", color: "#ccc", fontWeight: 400, fontSize:"19px" }}>
                     info@urosbrkic.com
                   </Link>
-                </Typography>
+                
               </Stack>
               <Stack direction="row" spacing={2} alignItems="center">
                 <Instagram sx={{ color: "#4DA6FF"}} />
-                <Typography sx={{ color: "#f5f5f5" }}>
-                  
-                  <Link href="https://instagram.com/urosbrkic969" target="_blank" underline="hover" sx={{ mt: "5px", ml: "20px", color: "#f5f5f5", fontWeight: 400, fontSize:"18px" }}>
+            
+                  <Link href="https://instagram.com/urosbrkic969" target="_blank" underline="none" sx={{ fontFamily: "Ubuntu, sans-serif !important", mt: "5px", ml: "20px", color: "#ccc", fontWeight: 400, fontSize:"19px" }}>
                     urosbrkic969
                   </Link>
-                </Typography>
+                
               </Stack>
               <Stack direction="row" spacing={2} alignItems="center">
                 <XIcon sx={{ color: "#4DA6FF"}} />
-                <Typography sx={{ color: "#f5f5f5" }}>
-                  <Link href="https://x.com/@urosbrkic969" target="_blank" underline="hover" sx={{ color: "#f5f5f5", ml: "20px", fontWeight: 400, fontSize:"18px" }}>
+
+                  <Link href="https://x.com/@urosbrkic969" target="_blank" underline="none" sx={{ fontFamily: "Ubuntu, sans-serif !important", color: "#ccc", ml: "20px", fontWeight: 400, fontSize:"19px" }}>
                     urosbrkic969
                   </Link>
-                </Typography>
+                
               </Stack>
             </Stack>
           </Box>
         </Box>
-      </Container>
-    </Box>
   );
 }

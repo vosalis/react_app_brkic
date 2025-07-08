@@ -2,11 +2,11 @@ import * as React from "react";
 import "./Footer.css";
 import { styled, Sheet, Grid } from "@mui/joy";
 import { Box, Paper, Container, Typography } from "@mui/material";
-import InstagramIcon from "../../../public/Images/Social/icons8-instagram-50.png";
-import YoutubeIcon from "../../../public/Images/Social/icons8-youtube-50.png";
-import FacebookIcon from "../../../public/Images/Social/icons8-facebook-48.png";
-import TiktokIcon from "../../../public/Images/Social/icons8-tiktok-50.png";
-import TwitterIcon from "../../../public/Images/Social/icons8-x-50.png";
+import InstagramIcon from "/Images/Social/icons8-instagram-50.png";
+import YoutubeIcon from "/Images/Social/icons8-youtube-50.png";
+import FacebookIcon from "/Images/Social/icons8-facebook-48.png";
+import TiktokIcon from "/Images/Social/icons8-tiktok-50.png";
+import TwitterIcon from "/Images/Social/icons8-x-50.png";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -22,16 +22,7 @@ const pages = [
   { link: "privacy-policy", text: "Politika privatnosti" },
 ];
 
-const Item = styled(Sheet)(({ theme }) => ({
-  ...theme.typography["body-sm"],
-  padding: theme.spacing(1),
-  textAlign: "center",
-  borderRadius: 4,
-  color: theme.vars.palette.text.secondary,
-  ...theme.applyStyles("dark", {
-    backgroundColor: theme.palette.background.level1,
-  }),
-}));
+
 
 export default function AutoGrid() {
   const settings = {
@@ -151,14 +142,13 @@ export default function AutoGrid() {
             <Grid
               sx={{
                 display: "flex",
-                /*justifyContent: "flex-end",  alignItems: "center",*/ color:
-                  "#fffef6",
+                 color: "#fffef6",
                 paddingTop: "30px",
               }}
               md={3}
               xs={8}
             >
-              <a href="#">
+              <a href="https://instagram.com/urosbrkic969">
                 <img
                   src={InstagramIcon}
                   alt="Instagram"
@@ -180,7 +170,7 @@ export default function AutoGrid() {
                   style={{ width: 37, height: 37, marginRight: "10px" }}
                 />
               </a>
-              <a href="#">
+              <a href="https://x.com/@urosbrkic969">
                 <img
                   src={TwitterIcon}
                   alt="X"

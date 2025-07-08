@@ -1,7 +1,4 @@
 import { Box, Container, Typography } from "@mui/material";
-import * as React from "react";
-import "./Biography.css";
-import image1 from "../../Images/Biograp.jpg";
 import Grid from "@mui/material/Grid";
 import data from "../../assets/data/evolution.json";
 
@@ -51,9 +48,7 @@ export default function Biography() {
         </Box>
       </Typography>
 
-      <Typography
-        variant="body1"
-        paragraph
+      <Box
         sx={{
           lineHeight: 1.8,
           color: "#f2f2f2",
@@ -137,6 +132,7 @@ export default function Biography() {
         <Grid container spacing={3} sx={{ padding: "30px 20px 100px 20px" }}>
           {data.map((item) => (
             <Grid
+            key={item.id || item.title || index}
               size={{ xs: 12, sm: 6, md: 4 }}
               sx={{
                 minHeight: "100px",
@@ -220,7 +216,7 @@ export default function Biography() {
           Danas je u punom takmičarskom ritmu, ali nikada ne zaboravlja gde je
           sve počelo. Za Uroša, vožnja nije samo sport – to je način života.{" "}
         </Typography>
-      </Typography>
+      </Box>
     </Box>
   );
 }

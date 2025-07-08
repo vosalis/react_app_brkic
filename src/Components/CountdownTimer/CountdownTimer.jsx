@@ -38,7 +38,7 @@ const CountdownTimer = ({ targetDate }) => {
   const timeStyle = {
     fontFamily: 'Bebas Neue, sans-serif !important' ,
     fontSize: { xs: '60px', md: '90px' },
-    color: 'fff',
+    color: '#fff',
     textAlign: 'center',
     width: { xs: '80px', md: '120px' }
   };
