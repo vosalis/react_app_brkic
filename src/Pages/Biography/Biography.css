@@ -1,0 +1,19 @@
+p span {
+    color: #4DA6FF;
+    font-weight: 500;
+    font-size: 25px;
+    color: "#4DA6FF";
+    font-weight: 700;
+    font-family: Rajdhani, sans-serif;
+    text-shadow: 1px 1px 2px #000;
+    line-height: normal;
+}
+
+p {
+    color: #c3c6d6;
+}
+
+.title span {
+    color: #4DA6FF;
+    font-size: 30px;
+}

@@ -1,0 +1,21 @@
+
+a, p{
+    text-decoration: none;
+    color: #fffef6;
+}
+h6 {
+    color: #9b948e;
+    padding-bottom: 20px;
+    line-height: 0%;
+}
+li {
+    list-style: none;
+
+}
+.Typography {
+    color: #fffef6;
+}
+
+@media screen and (max-width: 768px) {
+    
+}

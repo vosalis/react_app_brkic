@@ -1,0 +1,32 @@
+[
+    {
+      "key":1,
+      "name": "Čedomir",
+      "image": "Images/Team/Team_member_1.png",
+      "text": "Glavni mehaničar — zadužen da automobil uvek bude u savršenom stanju."
+    },
+    {
+      "key":2,
+      "name": "Luka",
+      "image": "Images/Team/Team_member_2.png",
+      "text": "Trkački inženjer — analiza podatke, podešavnje automobil i planira strategiju."
+    },
+    {
+      "key":3,
+      "name": "Lora",
+      "image": "Images/Team/Team_member_3.png",
+      "text": "Mediji i PR — vodi računa o javnosti, društvenim mrežama i kontaktu sa fanovima."
+    },
+    {
+      "key":4,
+      "name": "Natalija",
+      "image": "Images/Team/Team_member_4.png",
+      "text": "Lični trener — brine o fizičkoj spremi, fokusu i energiji na dan trke."
+    },
+    {
+      "key":4,
+      "name": "Ediz",
+      "image": "Images/Team/Team_member_5.png",
+      "text": "Direktror inovativnih tehnologija."
+    }
+  ]
