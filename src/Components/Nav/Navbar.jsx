@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -22,13 +21,15 @@ const pages = [
   { link: "home", text: "Home" },
   { link: "about-us", text: "O nama" },
   { link: "car", text: "O kolima" },
-  { link: "events", text: "Događaji" },
+  { link: "events", text: "Kalendar" },
 ];
 const mobilePages = [
   { link: "home", text: "Home" },
   { link: "biography", text: "Biografija" },
   { link: "team", text: "O timu" },
   { link: "car", text: "O kolima" },
+  { link: "events", text: "Kalendar" },
+  { link: "news", text: "Novosti"},
   { link: "contact", text: "Kontakt" },
 ];
 
@@ -57,6 +58,7 @@ function ResponsiveAppBar() {
             <ListItemButton component={Link} to={`/${page.link}`}>
               <ListItemText
                 sx={{
+                  
                   textAlign: "left",
                   fontSize: "30px",
                   paddingLeft: "40px",
@@ -158,6 +160,7 @@ function ResponsiveAppBar() {
                       open={Boolean(anchorElUser)}
                       onClose={handleCloseUserMenu}
                       sx={{
+                        
                         color: "#000",
                         ".MuiPaper-root": {
                           backgroundColor: "#222",

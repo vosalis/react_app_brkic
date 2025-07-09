@@ -5,7 +5,8 @@ import GuestFooter from "./Components/Footer/Footer";
 import { Box } from "@mui/material";
 import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
-import Events from "./Pages/Events";
+import News from "./Pages/News.jsx";
+import Events from "./Pages/Events.jsx";
 import Biography from "./Pages/Biography/Biography";
 import Contact from "./Pages/Contact.jsx";
 import "./App.css";
@@ -48,6 +49,7 @@ function App() {
             <Route path="/car" element={<Car />} />
             <Route path="/privacy-policy" element={<Privacy />} />
             <Route path="/cookies" element={<Cookies />} />
+            <Route path="/news" element={<News />} />
             
           </Routes>
 

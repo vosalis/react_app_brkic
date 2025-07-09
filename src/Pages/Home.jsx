@@ -27,7 +27,7 @@ export default function FixedContainer() {
           className="name"
           sx={{
             px: { sm: 1, md: 12.5 },
-            paddingBottom: "100px",
+            marginBottom: "160px",
             position: "relative",
           }}
         >

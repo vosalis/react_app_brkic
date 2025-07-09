@@ -1,5 +1,3 @@
-import * as React from "react";
-import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -18,6 +16,7 @@ import ResponsiveDialog from "../newsModal";
 
 export default function Media(props) {
   const { loading = false } = props;
+  
 
   const [openEvent, setOpenEvent] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -50,33 +49,32 @@ export default function Media(props) {
             <Grid
               key={index}
               size={{ xs: 12, sm: 4 }}
-              sx={{ justifyItems: "center" }}
             >
               <Card
                 sx={{
                   boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
-                  margin: "0 auto",
-                  maxWidth: 360,
+                  margin: { xs: "0 auto", md: "0 0" },
+                  maxWidth: 500,
                   minHeight: "340px",
                   position: "relative",
                   backgroundColor: "rgba(56, 56, 56, 0.8)",
                 }}
               >
-                <Box sx={{height: 200, overflow: "hidden"}}>
-                <CardMedia
-                  sx={{
-                    height: "100%",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    transition: "transform 0.4s ease-in-out",
-                    "&:hover": {
-                      transform: "scale(1.1)",
-                    },
-                  }}
-                  loading="lazy"
-                  image={`${import.meta.env.BASE_URL}${item.src}`}
-                  title="green iguana"
-                />
+                <Box sx={{ height: 200, overflow: "hidden" }}>
+                  <CardMedia
+                    sx={{
+                      height: "100%",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      transition: "transform 0.4s ease-in-out",
+                      "&:hover": {
+                        transform: "scale(1.1)",
+                      },
+                    }}
+                    loading="lazy"
+                    image={`${import.meta.env.BASE_URL}${item.src}`}
+                    title="green iguana"
+                  />
                 </Box>
                 <CardContent sx={{ color: "#fff" }}>
                   <Typography
@@ -113,6 +111,28 @@ export default function Media(props) {
           )
         )}
       </Grid>
+      <Button
+        variant="contained"
+        onClick={() => navigate('/news')}
+        sx={{
+          height: "60px",
+          width: "180px",
+          marginTop: "30px",
+          float: "right",
+          color:"#4DA6FF",
+          fontSize: "22px",
+          fontWeight: "300",
+          backgroundColor: "#fff",
+          borderRadius: "2px",
+          "&:hover": {
+            backgroundColor: "#70B7FF",
+            color: "#FFF",
+            fontWeight: "400",
+          },
+        }}
+      >
+        SVE NOVOSTI
+      </Button>
       {openEvent && (
         <ResponsiveDialog
           open={openEvent ? true : false}

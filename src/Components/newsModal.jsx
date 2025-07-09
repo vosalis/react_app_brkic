@@ -52,7 +52,7 @@ export default function ResponsiveDialog({
           aria-label="close"
           onClick={handleClose}
           sx={{
-            backgroundColor: "#C8C8C8",
+            backgroundColor: "#808080",
             position: "absolute",
             right: 8,
             top: 8,
