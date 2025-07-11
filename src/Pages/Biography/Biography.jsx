@@ -159,7 +159,7 @@ export default function Biography() {
           ))}
         </Grid>
         <Typography variant="h3" style={acent}>
-          POEODIČNA TRADICIJA
+          PORODIČNA TRADICIJA
         </Typography>
         <Typography
           variant="body1"
