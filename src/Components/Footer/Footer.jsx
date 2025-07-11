@@ -95,9 +95,9 @@ export default function AutoGrid() {
           }}
         >
           <Grid container spacing={3} sx={{ flexGrow: 1 }} gap={3}>
-            <Grid md={5} xs={8}>
+            <Grid md={5} xs={10}>
               <Typography variant="h6">O UROŠU</Typography>
-              <Typography sx={{ textAlign: "justify" }}>
+              <Typography sx={{ color: "#c3c6d6",fontSize: "16px", textAlign: "justify" }}>
                 Profesionalni automobilista čija karijera, započeta još u
                 detinjstvu iz trkačke porodice, obuhvata više od dve decenije
                 uspeha na domaćim i evropskim stazama – od kartinga do prototipa

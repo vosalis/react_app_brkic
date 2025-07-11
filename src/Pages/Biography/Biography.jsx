@@ -140,7 +140,6 @@ export default function Biography() {
                 backgroundColor: "rgba(56, 56, 56, 0.8)",
                 boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
                 padding: "25px 30px 30px 30px",
-                textAlign: "justify",
               }}
             >
               <Typography
@@ -149,7 +148,7 @@ export default function Biography() {
                   fontSize: "15px !important",
                 }}
               >
-                <span>
+                <span style={{fontSize: "20px"}}>
                   {item.title} {item.add}
                 </span>
                 <br />
