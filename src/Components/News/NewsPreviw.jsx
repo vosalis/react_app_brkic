@@ -101,8 +101,24 @@ export default function Media(props) {
                     onClick={() => {
                       handleOpenEvent(item);
                     }}
-                    size="small"
-                  >
+                    
+        sx={{
+          height: "30px",
+          width: "135px",
+          marginTop: "30px",
+          float: "right",
+          color:"#4DA6FF",
+          fontSize: "16px",
+          fontWeight: "300",
+          backgroundColor: "#fff",
+          borderRadius: "2px",
+          "&:hover": {
+            backgroundColor: "#70B7FF",
+            color: "#FFF",
+            fontWeight: "400",
+          },
+        }}
+      >
                     Saznaj više
                   </Button>
                 </CardActions>

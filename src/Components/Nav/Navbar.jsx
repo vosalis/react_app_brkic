@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -16,6 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "./../../Images/Logo.png";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
+
 
 const pages = [
   { link: "home", text: "Home" },
@@ -81,10 +81,15 @@ function ResponsiveAppBar() {
         backdropFilter: "blur(5px)",
         WebkitBackdropFilter: "blur(10px)",
         zIndex: (theme) => theme.zIndex.drawer + 1,
+        
       }}
     >
-      <Container maxWidth="xl">
+      
+              
+
         <Toolbar disableGutters>
+          <Box  sx={{
+              maxWidth: "1440px", margin: "auto", width: "100%", display: "flex"}}>
           <Box
             component="img"
             src={Logo}
@@ -93,11 +98,9 @@ function ResponsiveAppBar() {
               height: 75,
               display: { xs: "none", md: "flex" },
               mr: 1,
-              paddingLeft: "50px",
+              paddingLeft: "100px",
             }}
           />
-
-          {/* Mobile menu with Drawer */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -219,8 +222,10 @@ function ResponsiveAppBar() {
           >
             Kontakt
           </Button>
+          </Box>
+          
         </Toolbar>
-      </Container>
+        
     </AppBar>
   );
 }

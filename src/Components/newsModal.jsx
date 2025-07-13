@@ -43,8 +43,11 @@ export default function ResponsiveDialog({
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
         scroll="paper"
-        sx={{".MuiPaper-root": {
+        sx={{
+          ".MuiPaper-root": {
                           width: {sx: "100%", md: "65%"},
+                          backgroundColor: "rgba(56, 56, 56, 0.99)",
+                          
                         },}}
       >
         {/* Close Button in top-right */}
@@ -78,12 +81,12 @@ export default function ResponsiveDialog({
             }}
           />
           <DialogTitle
-            sx={{ paddingRight: "0", paddingLeft: "0" }}
+            sx={{ paddingRight: "0", paddingLeft: "0", color: "#fff" }}
             id="responsive-dialog-title"
           >
             {title} - {createdAt}
           </DialogTitle>
-          <DialogContentText sx={{ textAlign: "justify" }}>
+          <DialogContentText sx={{ textAlign: "justify", color: "#fffef6" }}>
             {description}
           </DialogContentText>
         </DialogContent>

@@ -36,6 +36,8 @@ function App() {
           }}
         >
           <ResponsiveAppBar />
+          <Box sx={{maxWidth: "1440px", margin: "auto", width: "100%"}}>
+          
 
           <Routes>
             
@@ -53,6 +55,8 @@ function App() {
             
           </Routes>
 
+          
+          </Box>
           <GuestFooter />
         </Box>
       </BrowserRouter>
