@@ -1,10 +1,10 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+
 import "./Home.css";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import CountdownTimer from "../Components/CountdownTimer/CountdownTimer";
 import image1 from "../Images/PRE_3574.png";
-import News from "./../Components/News/NewsPreviw";
+import News_preview from "./../Components/News/NewsPreviw";
 
 const acent = {
   color: "#4DA6FF",
@@ -31,7 +31,7 @@ export default function FixedContainer() {
             position: "relative",
           }}
         >
-          <Box /*sx={{ maxHeight: "100vh - 100px" }}*/>
+          <Box>
             <Box sx={{ position: "relative", zIndex: 2, paddingLeft: {xs:"30px", md: "0"}}}>
               <Typography
                 variant="h1"
@@ -65,7 +65,7 @@ export default function FixedContainer() {
                 >
                   SLEDEĆI DOGAĐAJ ZA
                 </Typography>
-                <CountdownTimer targetDate="2025-07-10T15:00:00" />
+                <CountdownTimer targetDate="2025-08-01T15:00:00" />
               </Box>
             </Box>
             <Box
@@ -92,22 +92,23 @@ export default function FixedContainer() {
           </Box>
           <Box
             sx={{
-              width: "100%",
-              height: "10px",
+              width: "100vw",
+              marginLeft:"-100px",
+              height: "80px",
               marginTop: "100px",
-              backgroundColor: "rgba(77, 166, 255, 0.95)",
+              background: "linear-gradient(180deg, rgba(15, 95, 174, 0) 0%, rgba(42, 40, 40, 0.8) 50%, rgba(15, 95, 174, 0) 100%)",
+
               backdropFilter: "blur(2px)",
               WebkitBackdropFilter: "blur(10px)",
               borderRadius: "5px",
-              boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
             }}
           ></Box>
           <Box className="newsContainer" sx={{ mt: "120px" }}>
-            <Typography sx={{paddingLeft: {xs:"20px", md: "0px"} }} 
+            <Typography sx={{fontSize: {xs: "30px !important", md:"40px !important "}, paddingLeft: {xs:"20px", md: "0px"} }} 
             style={acent} >POSLEDNJE VESTI</Typography>
             <Box sx={{marginBottom: "80px"}}
             >
-              <News />
+              <News_preview />
             </Box>
           </Box>
         </Box>

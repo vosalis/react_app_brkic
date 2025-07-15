@@ -1,21 +1,24 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Logo from "./../../Images/Logo.png";
-import { Link } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Button,
+  Menu,
+  MenuItem,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+
+import Logo from "./../../Images/Logo.png";
+import {Link} from "react-router-dom";
 
 const pages = [
   { link: "home", text: "Home" },
@@ -29,7 +32,7 @@ const mobilePages = [
   { link: "team", text: "O timu" },
   { link: "car", text: "O kolima" },
   { link: "events", text: "Kalendar" },
-  { link: "news", text: "Novosti"},
+  { link: "news", text: "Novosti" },
   { link: "contact", text: "Kontakt" },
 ];
 
@@ -58,7 +61,6 @@ function ResponsiveAppBar() {
             <ListItemButton component={Link} to={`/${page.link}`}>
               <ListItemText
                 sx={{
-                  
                   textAlign: "left",
                   fontSize: "30px",
                   paddingLeft: "40px",
@@ -81,15 +83,17 @@ function ResponsiveAppBar() {
         backdropFilter: "blur(5px)",
         WebkitBackdropFilter: "blur(10px)",
         zIndex: (theme) => theme.zIndex.drawer + 1,
-        
       }}
     >
-      
-              
-
-        <Toolbar disableGutters>
-          <Box  sx={{
-              maxWidth: "1440px", margin: "auto", width: "100%", display: "flex"}}>
+      <Toolbar disableGutters>
+        <Box
+          sx={{
+            maxWidth: "1440px",
+            margin: "auto",
+            width: "100%",
+            display: "flex",
+          }}
+        >
           <Box
             component="img"
             src={Logo}
@@ -163,7 +167,6 @@ function ResponsiveAppBar() {
                       open={Boolean(anchorElUser)}
                       onClose={handleCloseUserMenu}
                       sx={{
-                        
                         color: "#000",
                         ".MuiPaper-root": {
                           backgroundColor: "#222",
@@ -222,10 +225,8 @@ function ResponsiveAppBar() {
           >
             Kontakt
           </Button>
-          </Box>
-          
-        </Toolbar>
-        
+        </Box>
+      </Toolbar>
     </AppBar>
   );
 }

@@ -1,8 +1,7 @@
+import React, { useEffect, useState } from "react";
+import { Box, Typography } from "@mui/material";
 
-import React, { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
-
-const CountdownTimer = ({ targetDate }) => {
+ export default function CountdownTimer ({ targetDate }) {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
@@ -36,32 +35,31 @@ const CountdownTimer = ({ targetDate }) => {
   }, [targetDate]);
 
   const timeStyle = {
-    fontFamily: 'Bebas Neue, sans-serif !important' ,
-    fontSize: { xs: '60px', md: '90px' },
-    color: '#fff',
-    textAlign: 'center',
-    width: { xs: '80px', md: '120px' }
+    fontFamily: "Bebas Neue, sans-serif !important",
+    fontSize: { xs: "60px", md: "90px" },
+    color: "#fff",
+    textAlign: "center",
+    width: { xs: "80px", md: "120px" },
   };
 
   const labelStyle = {
-  fontSize: { xs: '15px', md: '25px' },
-  letterSpacing: '1px',
-  color: '#bfbfbf',
-  marginTop: '-8px',
-};
+    fontSize: { xs: "15px", md: "25px" },
+    letterSpacing: "1px",
+    color: "#bfbfbf",
+    marginTop: "-8px",
+  };
 
   return (
-    <Box display="flex" mt={2} justifyContent="center" gap={2}>
-      {['dana', 'sata', 'minuta', 'sekunda'].map((unit) => (
+    <Box display="flex" mt={2} justifyContent="center" gap={2} >
+      {["dana", "sata", "minuta", "sekunda"].map((unit) => (
         <Box key={unit}>
+                  
           <Typography sx={timeStyle}>
-            {String(timeLeft[unit]).padStart(2, '0')}
+            {String(timeLeft[unit]).padStart(2, "0")}
           </Typography>
-          <Typography sx={labelStyle}>{unit.toUpperCase()}</Typography>
+          <Typography sx={{labelStyle, paddingBottom: "20px"}}>{unit.toUpperCase()}</Typography>
         </Box>
       ))}
     </Box>
   );
 };
-
-export default CountdownTimer;

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useState, useEffect, Fragment } from "react";
 import {
   Dialog,
@@ -21,8 +20,6 @@ export default function ResponsiveDialog({
   createdAt,
 }) {
   const [openModal, setOpenModal] = useState(false);
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     if (open) {
@@ -34,6 +31,11 @@ export default function ResponsiveDialog({
     setOpenModal(false);
     onClose();
   };
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+
 
   return (
     <Fragment>
