@@ -1,8 +1,5 @@
-import * as React from "react";
-import { Block } from "@mui/icons-material";
 import { Typography, Box, Container } from "@mui/material";
 import image_car from "../../public/Images/DSC_3434.png";
-import Grid from "@mui/material/Grid";
 
 const acent = {
   fontWeight: 300,
@@ -14,22 +11,20 @@ const acent = {
 };
 
 const infoBoxStyle = {
-  borderRadius: "50%",
-  backgroundColor: "rgba(56, 56, 56, 0.7)",
-  boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
+  borderRadius: "10%",
+  background:
+    "linear-gradient(100deg, rgba(42, 40, 40, 0.8), rgba(56, 56, 56, 0.8))",
+  boxShadow: "0 0 10px rgba(0, 0, 0, 0.4)",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  padding: "20px",
-  aspectRatio: "1 / 1", // ensures it's always a perfect circle
-  width: "fit-content", // adjusts to content
-  minWidth: "160px", // fallback size
-  minHeight: "160px", // fallback size
+  padding: {xs: "5px 20px", md: "15px 40px"},
+  width: "fit-content",
   margin: "auto",
 };
 
-function Car() {
+export default function Car() {
   return (
     <Box
       className="name"
@@ -78,7 +73,7 @@ function Car() {
 
       <Box
         sx={{
-          marginTop: "100px",
+          marginTop: {xs: "100px", md: "150px"},
           marginBottom: "100px",
           position: "relative",
           border: "5px solid #4DA6FF",
@@ -100,14 +95,14 @@ function Car() {
             transition: "transform 0.4s ease-in-out",
             transform: "scale(1)",
             "&:hover": {
-              transform: "scale(1.2)",
+              transform: "scale(1.15)",
             },
           }}
         />
         <Box
           sx={{
             position: "absolute",
-            top: "-40px",
+            top: {xs: "-30px", md: "-90px"},
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
@@ -118,12 +113,12 @@ function Car() {
             <Typography
               sx={{
                 fontSize: {
-                  xs: "0.8rem",
+                  xs: "0.6rem",
                   sm: "0.9rem",
-                  md: "1.1rem",
+                  md: "1.4rem",
                 },
-                fontWeight: "bold",
-                color: "#fff",
+                fontWeight: "300",
+                color: "#f5f5f5",
               }}
             >
               MOTOR:
@@ -131,15 +126,16 @@ function Car() {
             <Box
               sx={{
                 pt: "6px",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.3rem" },
+                fontSize: { xs: "0.7rem", sm: "1rem", md: "1.5rem" },
                 transition: "transform 0.2s ease-in-out",
                 color: "#4DA6FF",
                 display: "inline-block",
                 fontFamily: "Ubuntu, sans-serif",
                 transform: "scale(1)",
                 lineHeight: "1.2",
+                textAlign: "center",
                 "&:hover": {
-                  transform: "scale(1.2)",
+                  transform: "scale(1.1)",
                 },
               }}
             >
@@ -151,12 +147,12 @@ function Car() {
             <Typography
               sx={{
                 fontSize: {
-                  xs: "0.8rem",
+                  xs: "0.6rem",
                   sm: "0.9rem",
-                  md: "1.1rem",
+                  md: "1.3rem",
                 },
-                fontWeight: "bold",
-                color: "#fff",
+                fontWeight: "300",
+                color: "#f5f5f5",
               }}
             >
               KUBIKAŽA:
@@ -164,15 +160,16 @@ function Car() {
             <Box
               sx={{
                 pt: "6px",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.3rem" },
+                fontSize: { xs: "0.7rem", sm: "1rem", md: "1.5rem" },
                 transition: "transform 0.2s ease-in-out",
                 color: "#4DA6FF",
                 display: "inline-block",
                 fontFamily: "Ubuntu, sans-serif",
                 transform: "scale(1)",
                 lineHeight: "1.2",
+                textAlign: "center",
                 "&:hover": {
-                  transform: "scale(1.2)",
+                  transform: "scale(1.1)",
                 },
               }}
             >
@@ -184,12 +181,12 @@ function Car() {
             <Typography
               sx={{
                 fontSize: {
-                  xs: "0.8rem",
+                  xs: "0.6rem",
                   sm: "0.9rem",
-                  md: "1.1rem",
+                  md: "1.3rem",
                 },
-                fontWeight: "bold",
-                color: "#fff",
+                fontWeight: "300",
+                color: "#f5f5f5",
               }}
             >
               SNAGA:
@@ -197,85 +194,7 @@ function Car() {
             <Box
               sx={{
                 pt: "6px",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.3rem" },
-                transition: "transform 0.2s ease-in-out",
-                color: "#4DA6FF",
-                display: "inline-block",
-                fontFamily: "Ubuntu, sans-serif",
-                transform: "scale(1)",
-                lineHeight: "1.2",
-                "&:hover": {
-                  transform: "scale(1.2)",
-                },
-              }}
-            >
-              348 ks
-            </Box>
-          </Box>
-        </Box>
-
-        {/* Bottom row boxes */}
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "-40px",
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            px: 4,
-          }}
-        >
-          <Box sx={infoBoxStyle}>
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "0.8rem",
-                  sm: "0.9rem",
-                  md: "1.1rem",
-                },
-                fontWeight: "bold",
-                color: "#fff",
-              }}
-            >
-              TEŽINA:
-            </Typography>
-            <Box
-              sx={{
-                pt: "6px",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.3rem" },
-                transition: "transform 0.2s ease-in-out",
-                color: "#4DA6FF",
-                display: "inline-block",
-                fontFamily: "Ubuntu, sans-serif",
-                transform: "scale(1)",
-                lineHeight: "1.2",
-                "&:hover": {
-                  transform: "scale(1.2)",
-                },
-              }}
-            >
-              490 kg
-            </Box>
-          </Box>
-
-          <Box sx={infoBoxStyle}>
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "0.8rem",
-                  sm: "0.9rem",
-                  md: "1.1rem",
-                },
-                fontWeight: "bold",
-                color: "#fff",
-              }}
-            >
-              MENJAČ:
-            </Typography>
-            <Box
-              sx={{
-                pt: "6px",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.3rem" },
+                fontSize: { xs: "0.7rem", sm: "1rem", md: "1.5rem" },
                 transition: "transform 0.2s ease-in-out",
                 color: "#4DA6FF",
                 display: "inline-block",
@@ -284,24 +203,40 @@ function Car() {
                 lineHeight: "1.2",
                 textAlign: "center",
                 "&:hover": {
-                  transform: "scale(1.2)",
+                  transform: "scale(1.1)",
                 },
               }}
             >
-              Sedmostepeni<br/>Sekvencijalni<br/>Sadev
+              348 ks
             </Box>
           </Box>
+        </Box>
+
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: {xs: "-40px", md: "-90px"},
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            px: 4,
+          }}
+        >
+          
+          
+
+          
 
           <Box sx={infoBoxStyle}>
             <Typography
               sx={{
                 fontSize: {
-                  xs: "0.8rem",
+                  xs: "0.6rem",
                   sm: "0.9rem",
-                  md: "1.1rem",
+                  md: "1.3rem",
                 },
-                fontWeight: "bold",
-                color: "#fff",
+                fontWeight: "300",
+                color: "#f5f5f5",
               }}
             >
               POGON:
@@ -309,19 +244,95 @@ function Car() {
             <Box
               sx={{
                 pt: "6px",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.3rem" },
+                fontSize: { xs: "0.7rem", sm: "1rem", md: "1.5rem" },
                 transition: "transform 0.2s ease-in-out",
                 color: "#4DA6FF",
                 display: "inline-block",
                 fontFamily: "Ubuntu, sans-serif",
                 transform: "scale(1)",
                 lineHeight: "1.2",
+                textAlign: "center",
                 "&:hover": {
-                  transform: "scale(1.2)",
+                  transform: "scale(1.1)",
                 },
               }}
             >
-              Zadnji
+              ZADNJI
+            </Box>
+            
+          </Box>
+
+          <Box sx={infoBoxStyle}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "0.6rem",
+                  sm: "0.9rem",
+                  md: "1.3rem",
+                },
+                fontWeight: "300",
+                color: "#f5f5f5",
+              }}
+            >
+              TEŽINA:
+            </Typography>
+            <Box
+              sx={{
+                pt: "6px",
+                fontSize: { xs: "0.7rem", sm: "1rem", md: "1.5rem" },
+                transition: "transform 0.2s ease-in-out",
+                color: "#4DA6FF",
+                display: "inline-block",
+                fontFamily: "Ubuntu, sans-serif",
+                transform: "scale(1)",
+                lineHeight: "1.2",
+                textAlign: "center",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              490 kg
+            </Box>
+          </Box>
+          
+          <Box sx={infoBoxStyle}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "0.6rem",
+                  sm: "0.9rem",
+                  md: "1.3rem",
+                },
+                fontWeight: "300",
+                color: "#f5f5f5",
+              }}
+            >
+              MENJAČ:
+            </Typography>
+            <Box
+              sx={{
+                pt: "6px",
+                fontSize: { xs: "0.7rem", sm: "1rem", md: "1.3rem" },
+                transition: "transform 0.2s ease-in-out",
+                color: "#4DA6FF",
+                display: "inline-block",
+                fontFamily: "Ubuntu, sans-serif",
+                transform: "scale(1)",
+                lineHeight: "1.2",
+                textAlign: "center",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              SEDMOSTEPENI
+              <br />
+              SEKVENCIJALNI
+              
+              
+              <br />
+              SADEV
             </Box>
           </Box>
         </Box>
@@ -330,4 +341,3 @@ function Car() {
   );
 }
 
-export default Car;
