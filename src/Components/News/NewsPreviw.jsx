@@ -7,9 +7,10 @@ import {
   Typography,
   Box,
   Grid,
+  CardContent
 } from "@mui/material";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useState, useEffect, CardContent } from "react";
+import { useState, useEffect } from "react";
 
 import ResponsiveDialog from "../newsModal";
 
@@ -49,7 +50,7 @@ export default function Media(props) {
       >
         {(loading ? Array.from(new Array(3)) : data.slice(0, 3)).map(
           (item, index) => (
-            <Grid key={index} size={{ xs: 12, sm: 4 }} sx={{}}>
+            <Grid key={index} size={{ xs: 12, sm: 4 }}>
               <Card
                 sx={{
                   background:
@@ -140,6 +141,7 @@ export default function Media(props) {
           height: "60px",
           width: "180px",
           marginTop: "30px",
+          marginRight: {xs: "30px", md: "0px"},
           float: "right",
           color: "#4DA6FF",
           fontSize: "22px",

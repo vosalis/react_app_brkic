@@ -104,7 +104,7 @@ export default function FixedContainer() {
             }}
           ></Box>
           <Box className="newsContainer" sx={{ mt: "120px" }}>
-            <Typography sx={{fontSize: {xs: "30px !important", md:"40px !important "}, paddingLeft: {xs:"20px", md: "0px"} }} 
+            <Typography sx={{fontSize: {xs: "30px", md:"40px"}, paddingLeft: {xs:"20px", md: "0px"} }} 
             style={acent} >POSLEDNJE VESTI</Typography>
             <Box sx={{marginBottom: "80px"}}
             >
