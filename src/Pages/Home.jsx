@@ -26,7 +26,7 @@ export default function FixedContainer() {
         <Box
           className="name"
           sx={{
-            px: { sm: 1, md: 12.5 },
+            px: { sm: 0, md: 12.5 },
             marginBottom: "160px",
             position: "relative",
           }}
@@ -93,13 +93,12 @@ export default function FixedContainer() {
           <Box
             sx={{
               width: "100vw",
-              marginLeft: {xs: "-8", md: "-100px" },
+              marginLeft: "-100px",
               height: "80px",
               marginTop: "100px",
               background: "linear-gradient(180deg, rgba(15, 95, 174, 0) 8%, rgba(42, 40, 40, 0.8) 50%, rgba(15, 95, 174, 0) 92%)",
 
               backdropFilter: "blur(2px)",
-              WebkitBackdropFilter: "blur(10px)",
               borderRadius: "5px",
             }}
           ></Box>

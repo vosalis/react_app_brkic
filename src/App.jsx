@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import "./App.css";
+
 import Home from "./Pages/Home";
 import News from "./Pages/News.jsx";
 import Events from "./Pages/Events.jsx";
