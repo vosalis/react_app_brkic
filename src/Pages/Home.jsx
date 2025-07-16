@@ -93,7 +93,7 @@ export default function FixedContainer() {
           <Box
             sx={{
               width: "100vw",
-              marginLeft: "-100px",
+              marginLeft: {xs: "0", sm:"-100px"},
               height: "80px",
               marginTop: "100px",
               background: "linear-gradient(180deg, rgba(15, 95, 174, 0) 8%, rgba(42, 40, 40, 0.8) 50%, rgba(15, 95, 174, 0) 92%)",
