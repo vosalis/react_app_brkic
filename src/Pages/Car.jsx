@@ -4,9 +4,10 @@ import image_car from "../../public/Images/DSC_3434.png";
 const acent = {
   fontWeight: 300,
   fontFamily: "Rajdhani, sans-serif",
+
+  fontSize: { xs: "1rem", md: "3rem" },
   letterSpacing: "2px",
   fontStyle: "normal",
-  fontSize: "24px",
   lineHeight: 1.2,
 };
 
@@ -19,7 +20,7 @@ const infoBoxStyle = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  padding: {xs: "5px 20px", md: "15px 40px"},
+  padding: { xs: "5px 15px", md: "15px 40px" },
   width: "fit-content",
   margin: "auto",
 };
@@ -29,7 +30,7 @@ export default function Car() {
     <Box
       className="name"
       sx={{
-        px: { sm: 1, md: 12.5 },
+        px: { xs: 0, md: 12.5 },
         paddingBottom: "100px",
         color: "#f2f2f2",
       }}
@@ -50,7 +51,6 @@ export default function Car() {
           component="span"
           sx={{
             color: "#4DA6FF",
-            paddingLeft: "1%",
             fontSize: { xs: "1.2rem", sm: "1.8rem", md: "3rem" },
           }}
         >
@@ -61,9 +61,10 @@ export default function Car() {
       <Typography
         style={acent}
         sx={{
-          maxWidth: "78%",
-          paddingTop: "80px",
-          paddingLeft: "50px",
+          
+  fontSize: { xs: "1rem", md: "2rem" },
+          padding: "80px 30px 40px 30px",
+          maxWidth: { xs: "100%", md: "78%" },
           color: "#c3c6d6;",
         }}
       >
@@ -73,12 +74,14 @@ export default function Car() {
 
       <Box
         sx={{
-          marginTop: {xs: "100px", md: "150px"},
+          margin: "0px 30px 40px 30px",
+          marginTop: { xs: "100px", md: "150px" },
           marginBottom: "100px",
           position: "relative",
           border: "5px solid #4DA6FF",
           borderRadius: "200px",
           height: { xs: "200px", sm: "300px", md: "400px", lg: "500px" },
+
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -102,11 +105,11 @@ export default function Car() {
         <Box
           sx={{
             position: "absolute",
-            top: {xs: "-30px", md: "-90px"},
+            top: { xs: "-20px", md: "-70px" },
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
-            px: 4,
+            px: 3,
           }}
         >
           <Box sx={infoBoxStyle}>
@@ -215,18 +218,13 @@ export default function Car() {
         <Box
           sx={{
             position: "absolute",
-            bottom: {xs: "-40px", md: "-90px"},
+            bottom: { xs: "-40px", md: "-90px" },
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
             px: 4,
           }}
         >
-          
-          
-
-          
-
           <Box sx={infoBoxStyle}>
             <Typography
               sx={{
@@ -259,7 +257,6 @@ export default function Car() {
             >
               ZADNJI
             </Box>
-            
           </Box>
 
           <Box sx={infoBoxStyle}>
@@ -295,7 +292,7 @@ export default function Car() {
               490 kg
             </Box>
           </Box>
-          
+
           <Box sx={infoBoxStyle}>
             <Typography
               sx={{
@@ -329,8 +326,6 @@ export default function Car() {
               SEDMOSTEPENI
               <br />
               SEKVENCIJALNI
-              
-              
               <br />
               SADEV
             </Box>
@@ -340,4 +335,3 @@ export default function Car() {
     </Box>
   );
 }
-
