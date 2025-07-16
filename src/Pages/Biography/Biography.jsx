@@ -10,7 +10,7 @@ const acent = {
   fontStyle: "normal",
   paddingTop: "50px",
   paddingBottom: "30px",
-  paddingLeft: "100px",
+  paddingLeft: "50px",
 };
 
 export default function Biography() {
@@ -136,24 +136,26 @@ export default function Biography() {
               size={{ xs: 12, sm: 6, md: 4 }}
               sx={{
                 minHeight: "100px",
-                borderRadius: "10px",
-                backgroundColor: "rgba(56, 56, 56, 0.8)",
-                boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
                 padding: "25px 30px 30px 30px",
+                background:
+                    "linear-gradient(100deg, rgba(42, 40, 40, 0.8), rgba(56, 56, 56, 0.8))",
+                  boxShadow: "0 0 20px rgba(0, 0, 0, 0.4)",
+                  borderRadius: "5px",
               }}
             >
               <Typography
                 variant="body1"
-                sx={{
-                  fontSize: "15px !important",
-                }}
-              >
-                <span style={{fontSize: "20px"}}>
+
+              sx={{color: "#4DA6FF",
+  fontSize: "24px",
+  fontWeight: 600,
+  fontFamily: "Rajdhani, sans-serif",
+  fontStyle: "normal",}}>
                   {item.title} {item.add}
-                </span>
-                <br />
+                </Typography>
+              <Typography>
                 {item.text}
-                <br />
+                
               </Typography>
             </Grid>
           ))}

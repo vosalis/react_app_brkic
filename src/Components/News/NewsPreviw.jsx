@@ -1,15 +1,15 @@
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import { Container } from "@mui/material";
 import data from "../../assets/data/events.json";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
+import {
+  Card,
+  CardMedia,
+  CardActions,
+  Button,
+  Typography,
+  Box,
+  Grid,
+} from "@mui/material";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, CardContent } from "react";
 
 import ResponsiveDialog from "../newsModal";
 
@@ -41,11 +41,15 @@ export default function Media(props) {
 
   return (
     <Box sx={{}}>
-      <Grid container spacing={3} justifyContent="center" sx={{padding: {xs:"0 30px", md:"0 0"}}}>
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        sx={{ padding: { xs: "0 30px", md: "0 0" } }}
+      >
         {(loading ? Array.from(new Array(3)) : data.slice(0, 3)).map(
           (item, index) => (
-            <Grid key={index} size={{ xs: 12, sm: 4 }} sx={{
-                  }}>
+            <Grid key={index} size={{ xs: 12, sm: 4 }} sx={{}}>
               <Card
                 sx={{
                   background:
@@ -96,13 +100,14 @@ export default function Media(props) {
                     {item.text}
                   </Typography>
                 </CardContent>
-                <CardActions sx={{ position: "absolute", bottom: "5px", right: "15px",}}>
+                <CardActions
+                  sx={{ position: "absolute", bottom: "5px", right: "15px" }}
+                >
                   <Button
                     onClick={() => {
                       handleOpenEvent(item);
                     }}
                     sx={{
-                      
                       marginLeft: "auto",
                       padding: "5px 15px",
                       marginTop: "30px",
