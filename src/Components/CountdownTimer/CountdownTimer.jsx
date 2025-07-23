@@ -1,7 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 
- export default function CountdownTimer ({ targetDate }) {
+export default function CountdownTimer({ targetDate }) {
+  const timeStyle = {
+    fontFamily: "Bebas Neue, sans-serif !important",
+    fontSize: { xs: "60px", md: "90px" },
+    color: "#fff",
+    textAlign: "center",
+    width: { xs: "80px", md: "120px" },
+  };
+
+  const labelStyle = {
+    fontSize: { xs: "15px", md: "25px" },
+    letterSpacing: "1px",
+    color: "#bfbfbf",
+    marginTop: "-8px",
+  };
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
@@ -21,7 +35,6 @@ import { Box, Typography } from "@mui/material";
         sekunda: 0,
       };
     }
-
     return timeLeft;
   };
 
@@ -34,32 +47,18 @@ import { Box, Typography } from "@mui/material";
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const timeStyle = {
-    fontFamily: "Bebas Neue, sans-serif !important",
-    fontSize: { xs: "60px", md: "90px" },
-    color: "#fff",
-    textAlign: "center",
-    width: { xs: "80px", md: "120px" },
-  };
-
-  const labelStyle = {
-    fontSize: { xs: "15px", md: "25px" },
-    letterSpacing: "1px",
-    color: "#bfbfbf",
-    marginTop: "-8px",
-  };
-
   return (
-    <Box display="flex" mt={2} justifyContent="center" gap={2} >
+    <Box display="flex" mt={2} justifyContent="center" gap={2}>
       {["dana", "sata", "minuta", "sekunda"].map((unit) => (
         <Box key={unit}>
-                  
-          <Typography sx={timeStyle}>
+          <Typography sx={{ ...timeStyle }}>
             {String(timeLeft[unit]).padStart(2, "0")}
           </Typography>
-          <Typography sx={{labelStyle, paddingBottom: "20px"}}>{unit.toUpperCase()}</Typography>
+          <Typography sx={{ ...labelStyle, paddingBottom: "20px" }}>
+            {unit.toUpperCase()}
+          </Typography>
         </Box>
       ))}
     </Box>
   );
-};
+}

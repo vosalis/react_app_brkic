@@ -24,6 +24,7 @@ const pages = [
 
 
 
+
 export default function AutoGrid() {
   const settings = {
     dots: false,
@@ -96,7 +97,7 @@ export default function AutoGrid() {
         >
           <Grid container spacing={3} sx={{ flexGrow: 1 }} gap={3}>
             <Grid md={5} xs={10}>
-              <Typography variant="h6">O UROŠU</Typography>
+              <Typography style={{}} variant="h6" >O UROŠU</Typography>
               <Typography sx={{ color: "#c3c6d6",fontSize: "16px", textAlign: "justify" }}>
                 Profesionalni automobilista čija karijera, započeta još u
                 detinjstvu iz trkačke porodice, obuhvata više od dve decenije
@@ -110,7 +111,7 @@ export default function AutoGrid() {
               xs={8}
               sx={{ position: "relative", minHeight: "150px" }}
             >
-              <Typography sx={{}} variant="h6">
+              <Typography style={{}} variant="h6">
                 COOKIE AND PRIVACY POLICY
               </Typography>
               <List

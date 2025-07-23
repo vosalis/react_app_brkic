@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useEffect, Fragment } from "react";
 import {
   Dialog,
@@ -86,10 +87,15 @@ export default function ResponsiveDialog({
             sx={{ paddingRight: "0", paddingLeft: "0", color: "#fff" }}
             id="responsive-dialog-title"
           >
-            {title} - {createdAt}
+            {title}
           </DialogTitle>
           <DialogContentText sx={{ textAlign: "justify", color: "#fffef6" }}>
-            {description}
+            {description.split("\n").map((line, idx) => (
+    <React.Fragment key={idx}>
+      {line}
+      <br />
+    </React.Fragment>
+  ))}
           </DialogContentText>
         </DialogContent>
       </Dialog>
