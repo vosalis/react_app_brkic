@@ -24,14 +24,12 @@ const pages = [
   { link: "home", text: "Home" },
   { link: "about-us", text: "O nama" },
   { link: "car", text: "O kolima" },
-  { link: "events", text: "Kalendar" },
 ];
 const mobilePages = [
   { link: "home", text: "Home" },
   { link: "biography", text: "Biografija" },
   { link: "team", text: "O timu" },
   { link: "car", text: "O kolima" },
-  { link: "events", text: "Kalendar" },
   { link: "news", text: "Novosti" },
   { link: "contact", text: "Kontakt" },
 ];

@@ -99,7 +99,7 @@ export default function Events(props) {
                   }}
                   size="small"
                 >
-                  Learn More
+                  Saznaj više
                 </Button>
               </CardActions>
             </Card>

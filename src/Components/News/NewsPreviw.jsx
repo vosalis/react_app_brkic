@@ -139,12 +139,12 @@ export default function Media(props) {
         onClick={() => navigate("/news")}
         sx={{
           height: "60px",
-          width: "180px",
+          width: "160px",
           marginTop: "30px",
           marginRight: {xs: "30px", md: "0px"},
           float: "right",
           color: "#4DA6FF",
-          fontSize: "22px",
+          fontSize: "19px",
           fontWeight: "400",
           border: "1px solid rgba(77, 166, 255, 0.4)",
           borderRadius: "5px",
@@ -165,7 +165,6 @@ export default function Media(props) {
           onClose={handleCloseEvent}
           title={openEvent.title}
           description={openEvent.channel}
-          createdAt={openEvent.createdAt}
           img={openEvent.src}
         />
       )}

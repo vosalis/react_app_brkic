@@ -67,7 +67,7 @@ export default function FixedContainer() {
               >
                 SLEDEĆI DOGAĐAJ ZA
               </Typography>
-              <CountdownTimer targetDate="2025-08-01T15:00:00" />
+              <CountdownTimer targetDate="2025-10-01T15:00:00" />
             </Box>
           </Box>
           <Box
@@ -93,15 +93,7 @@ export default function FixedContainer() {
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          width: "100%",
-          height: "100px",
-          marginTop: "100px",
-          background:
-            "linear-gradient(180deg, rgba(15, 95, 174, 0) 8%, rgba(42, 40, 40, 0.8) 50%, rgba(15, 95, 174, 0) 92%)",
-        }}
-      ></Box>
+      
 
       <Box
         className="name"
